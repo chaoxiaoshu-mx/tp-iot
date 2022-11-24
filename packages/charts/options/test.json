@@ -1,0 +1,170 @@
+{
+  "info": {
+    "pluginName": "测试1"
+  },
+  "tsl": {
+    "properties": [
+      {
+        "dataType": "float",
+        "dataRange": "0-999",
+        "stepLength": 0.1,
+        "unit": "degree",
+        "title": "温度",
+        "name": "temperature"
+      },
+      {
+        "dataType": "float",
+        "dataRange": "0-999",
+        "stepLength": 0.1,
+        "unit": "degree",
+        "title": "湿度",
+        "name": "humidity"
+      }
+    ],
+    "option": {
+      "classify": "custom"
+    }
+  },
+  "chart": [
+    {
+      "tooltip": {
+        "formatter": "{a} <br/>{b} : {c}%"
+      },
+      "series": [
+        {
+          "name": "Pressure",
+          "type": "gauge",
+          "startAngle": 200,
+          "endAngle": -20,
+          "offsetCenter": [
+            0,
+            "-15%"
+          ],
+          "min": 0,
+          "max": 60,
+          "axisLine": {
+            "lineStyle": {
+              "width": 10,
+              "color": [
+                [
+                  0.3,
+                  "#67e0e3"
+                ],
+                [
+                  0.7,
+                  "#37a2da"
+                ],
+                [
+                  1,
+                  "#fd666d"
+                ]
+              ]
+            }
+          },
+          "progress": {
+            "show": true,
+            "width": 20
+          },
+          "detail": {
+            "formatter": "{value}°C",
+            "fontSize": 16
+          },
+          "data": [
+            {
+              "value": 50,
+              "name": "温度"
+            }
+          ]
+        }
+      ],
+      "simulator": {
+        "funcArr": [
+          "return +(Math.random() * 60).toFixed(2);"
+        ],
+        "interval": 1500
+      },
+      "id": "VQX2H72AXnqE",
+      "name": "温度",
+      "mapping": [
+        "temperature"
+      ]
+    },
+    {
+      "series": [
+        {
+          "type": "gauge",
+          "startAngle": 200,
+          "endAngle": -20,
+          "min": 0,
+          "max": 60,
+          "splitNumber": 12,
+          "itemStyle": {
+            "color": "#FFAB91"
+          },
+          "progress": {
+            "show": true,
+            "width": 30
+          },
+          "pointer": {
+            "show": false
+          },
+          "axisLine": {
+            "lineStyle": {
+              "width": 30
+            }
+          },
+          "splitLine": {
+            "show": false,
+            "distance": -22,
+            "length": 14,
+            "lineStyle": {
+              "width": 2,
+              "color": "#999"
+            }
+          },
+          "axisLabel": {
+            "distance": -20,
+            "color": "#999",
+            "fontSize": 16
+          },
+          "anchor": {
+            "show": false
+          },
+          "title": {
+            "show": false
+          },
+          "detail": {
+            "valueAnimation": true,
+            "width": "60%",
+            "lineHeight": 40,
+            "borderRadius": 8,
+            "offsetCenter": [
+              0,
+              "-15%"
+            ],
+            "fontSize": 30,
+            "fontWeight": "bolder",
+            "formatter": "{value} °C",
+            "color": "auto"
+          },
+          "data": [
+            {
+              "value": 20
+            }
+          ]
+        }
+      ],
+      "simulator": {
+        "funcArr": [
+          "return +(Math.random() * 60).toFixed(2);"
+        ],
+        "interval": 3000
+      },
+      "id": "K7kKTX1kjp9y",
+      "name": "湿度",
+      "mapping": [
+        "humidity"
+      ]
+    }
+  ]
+}
